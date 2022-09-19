@@ -1,6 +1,4 @@
-var express = require('express');
-var app = express();
-app.set('view engine', 'ejs');
+var app = require('./config/server');
 
 
 app.get('/', function(req, res) {
@@ -11,10 +9,10 @@ app.get('/tecnologia', function(req, res) {
     res.render("admin/form_add_noticia");
 });
 
-app.get('/', function(req, res) {
+app.get('/noticias', function(req, res) {
     res.render("noticias/noticias");
 });
 
 app.listen(3000, function(){
-    console.log('Express server listening on port 3000');
+    console.log("Servidor On");
 });
